@@ -1,0 +1,58 @@
+# ───────── PDF parsing & image OCR ─────────
+pymupdf==1.24.3
+pillow>=10.3
+pytesseract>=0.3.10
+
+# ───────── LLM tooling & tokenisation ──────
+tiktoken>=0.6.0
+openai>=1.30
+
+# ───────── LangChain core stack ────────────
+langchain-core>=0.2.0
+langchain-text-splitters>=0.0.1
+langchain>=0.1.17
+
+# ───────── Vector DB & similarity search ───
+faiss-cpu>=1.7.4
+
+# ───────── Embeddings & deep-learning ──────
+torch>=2.2
+sentence-transformers>=2.7       # includes SBERT & CLIP models
+transformers==4.40.2             # for future fine-tuning (BERT/GPT)
+
+# ───────── Data wrangling & NLP ────────────
+pandas>=2.2
+numpy>=1.26.4
+nltk==3.8.1
+
+# ───────── Experiment tracking & plots ─────
+tqdm>=4.66
+matplotlib==3.8.4
+seaborn==0.13.2
+
+# ───────── Evaluation metrics ──────────────
+rouge-score>=0.1
+sacrebleu==2.5.1                  # newest PyPI release
+
+# ───────── Dimensionality reduction ────────
+umap-learn>=0.5
+plotly>=5.22
+
+# ───────── Environment / config helpers ────
+python-dotenv>=1.0
+pyyaml>=6.0
+
+# ───────── Testing ─────────────────────────
+pytest>=8.0
+
+# ───────── Web back-end (FastAPI) ──────────
+fastapi>=0.95
+uvicorn[standard]>=0.22
+jinja2>=3.1
+python-multipart>=0.0.6           # for file uploads
+
+# ───────── Bonus task UI (Gradio) ──────────
+gradio==4.28.3
+
+# ───────── OPTIONAL rapid ranking baseline ─
+rank-bm25==0.2.2                  # quick lexical baseline (optional)

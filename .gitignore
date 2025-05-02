@@ -1,6 +1,7 @@
-# Python artifacts
+# local-only folders
+.rag/
 __pycache__/
-*.py[cod]
+*.pyc
+
+# environment files
 .env
-# VS Code
-.vscode/
