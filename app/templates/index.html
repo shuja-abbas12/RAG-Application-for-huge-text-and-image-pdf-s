@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Multimodal RAG Demo</title>
+  <link rel="stylesheet" href="/static/main.css" />
+  <!-- Plotly for UMAP -->
+  <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+  <!-- Marked.js for Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>📄 FAST-NUCES × PwC × FYP — RAG Playground</h1>
+  </header>
+
+  <main>
+    <section class="chat-box">
+      <form id="ask-form">
+        <textarea id="query" name="query"
+                  placeholder="Ask a question about the PDFs…"></textarea>
+        <div class="controls">
+          <input type="file" id="image" name="image" accept="image/*" />
+          <label>Text-k
+            <input type="number" id="k_text" name="k_text" value="4" min="1" max="10" />
+          </label>
+          <label>Image-k
+            <input type="number" id="k_img" name="k_img" value="2" min="0" max="10" />
+          </label>
+          <button type="submit" id="ask-btn">🔍 Ask</button>
+          <div id="spinner" class="spinner hidden"></div>
+        </div>
+      </form>
+
+      <article id="answer-card" class="card hidden">
+        <div id="answer"></div>
+        <h3>Sources</h3>
+        <ul id="sources"></ul>
+        <p id="latency"></p>
+      </article>
+    </section>
+
+    <section class="viz-box">
+      <h2>Embedding Space (UMAP)</h2>
+      <div id="umap-plot">Loading …</div>
+    </section>
+  </main>
+
+  <footer>
+    GPT-4o-mini • Local embeddings • v0.1
+  </footer>
+
+  <script src="/static/main.js"></script>
+</body>
+</html>
